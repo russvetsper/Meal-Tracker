@@ -1,10 +1,11 @@
 import { Component } from 'angular2/core';
 import { Meal } from './meal.model';
+import { CaloriesPipe } from './calories.pipe'
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
-  pipes:[CaloriesPipe],
+  pipes: [CaloriesPipe],
   template: `
 
   <select (change)="onChange($event.target.value)" class="filter">
@@ -13,7 +14,8 @@ import { Meal } from './meal.model';
   <option value="lowCalories">Low-Calories</option>
   </select>
 
-  <div *ngFor="#currentMeal of mealList | calories:selectedCalories" (click)="MealClicked(currentMeal)">
+  <div *ngFor="#currentMeal of mealList | calories:selectedCalories" (click)="MealClicked(currentMeal)"
+        [class.selected]="currentMeal === selectedMeal">
     <h3>{{currentMeal.name}} | {{currentMeal.description}} | {{currentMeal.calories}}</h3>
     <form *ngIf="currentMeal === selectedMeal">
       <input [(ngModel)]="currentMeal.name">
