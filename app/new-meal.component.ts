@@ -7,3 +7,10 @@ import { Meal } from './meal.model'
   outputs: ['onSubmitNewMeal'],
   templateUrl: '/app/new-meal.component.html'
 })
+
+export class addMealComponent{
+  public onSubmitNewMeal: EventEmitter<string[]>
+  constructor(){
+    this.onSubmitNewMeal = new EventEmitter();
+  }
+}
