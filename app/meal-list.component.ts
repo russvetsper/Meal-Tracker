@@ -15,3 +15,13 @@ import { Meal } from './meal.model';
   </div>
   `
 })
+
+export class MealListComponent{
+  public mealList:Meal[];
+  public selectedMeal:Meal;
+
+  MealClicked(currentMeal:Meal):void{
+    this.selectedMeal=currentMeal;
+  }
+
+}
