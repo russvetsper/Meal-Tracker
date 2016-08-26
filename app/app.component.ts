@@ -9,9 +9,9 @@ import { addMealComponent } from './new-meal.component'
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
-
     <meal-list [mealList]="meal"></meal-list>
-
+    <h2>Add New Meal</h2>
+    <add-meal (onSubmitNewMeal)="createMeal($event)"></add-meal>
   </div>
   `
 })
