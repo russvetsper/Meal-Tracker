@@ -4,8 +4,16 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
+  pipes:[CaloriesPipe],
   template: `
-  <div *ngFor="#currentMeal of mealList" (click)="MealClicked(currentMeal)">
+
+  <select (change)="onChange($event.target.value)" class="filter">
+  <option value="all">All</option>
+  <option value="highCalories">High-Calories</option>
+  <option value="lowCalories">Low-Calories</option>
+  </select>
+
+  <div *ngFor="#currentMeal of mealList | calories:selectedCalories" (click)="MealClicked(currentMeal)">
     <h3>{{currentMeal.name}} | {{currentMeal.description}} | {{currentMeal.calories}}</h3>
     <form *ngIf="currentMeal === selectedMeal">
       <input [(ngModel)]="currentMeal.name">
