@@ -1,9 +1,10 @@
 import { Component } from 'angular2/core';
-import { Skeleton } from './meal.model';
+import { Meal } from './meal.model';
+import { MealListComponent } from './meal-list.component';
 
 @Component({
   selector: 'my-app',
-  directives:[],
+  directives:[MealListComponent],
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
@@ -25,10 +26,10 @@ export class AppComponent {
     }
 
     createMeal(MealDetail:string[]):void{
-      var tempcalories : number = parsInt(MealDeatail[2]);
+    var tempcalories : number = parseInt(MealDetail[2]);
 
-      this.meal.push(
-        new Meal(MealDetail[0], MealDetail[1], tempcalories)
-      );
-    }
-}
+    this.meal.push(
+      new Meal(MealDetail[0], MealDetail[1], tempcalories)
+    );
+   }
+  }
