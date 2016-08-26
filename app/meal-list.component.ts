@@ -29,9 +29,14 @@ import { CaloriesPipe } from './calories.pipe'
 export class MealListComponent{
   public mealList:Meal[];
   public selectedMeal:Meal;
+   public selectedCalories:string;
 
   MealClicked(currentMeal:Meal):void{
     this.selectedMeal=currentMeal;
   }
+
+  onChange(optionFromMenu) {
+  this.selectedCalories = optionFromMenu;
+}
 
 }
