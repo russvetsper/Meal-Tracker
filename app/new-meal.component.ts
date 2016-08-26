@@ -13,4 +13,13 @@ export class addMealComponent{
   constructor(){
     this.onSubmitNewMeal = new EventEmitter();
   }
+
+  addMeal(name:HTMLInputElement,description:HTMLInputElement,calories:HTMLInputElement){
+    var newMealArray: string[] = [name.value, description.value, calories.value];
+    this.onSubmitNewMeal.emit(newMealArray);
+    name.value = "";
+    description.value = "";
+    calories.value =  "";
+
+  }
 }
