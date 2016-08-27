@@ -20,7 +20,7 @@ import { CaloriesPipe } from './calories.pipe'
     <form *ngIf="currentMeal === selectedMeal">
       <input [(ngModel)]="currentMeal.name">
       <input [(ngModel)]="currentMeal.description">
-      <input [(ngModel)]="currentMeal.calories">
+      <input [(ngModel)]="currentMeal.calories" type="number"  aria-label="amount">
     </form>
   </div>
   `
