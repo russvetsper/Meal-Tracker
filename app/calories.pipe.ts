@@ -13,7 +13,6 @@ export class CaloriesPipe implements PipeTransform {
 
     if (chosenCalories === "higCalorie") {
       for(var i = 0; i < input.length; i++) {
-
         if(input[i].calories >=500) {
           output.push(input[i]);
         }

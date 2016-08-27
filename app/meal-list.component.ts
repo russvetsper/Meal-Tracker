@@ -14,7 +14,7 @@ import { CaloriesPipe } from './calories.pipe'
   <option value="lowCalories">Low-Calories</option>
   </select>
 
-  <div *ngFor="#currentMeal of mealList | calories:selectedCalories" (click)="MealClicked(currentMeal)"
+  <div *ngFor="#currentMeal of mealList | calories:chosenCalories" (click)="MealClicked(currentMeal)"
         [class.selected]="currentMeal === selectedMeal">
     <h3>{{currentMeal.name}} | {{currentMeal.description}} | {{currentMeal.calories}}</h3>
     <form *ngIf="currentMeal === selectedMeal">
@@ -29,14 +29,14 @@ import { CaloriesPipe } from './calories.pipe'
 export class MealListComponent{
   public mealList:Meal[];
   public selectedMeal:Meal;
-   public selectedCalories:string;
+   public chosenCalories:string;
 
   MealClicked(currentMeal:Meal):void{
     this.selectedMeal=currentMeal;
   }
 
   onChange(optionFromMenu) {
-  this.selectedCalories = optionFromMenu;
+  this.chosenCalories = optionFromMenu;
 }
 
 }
