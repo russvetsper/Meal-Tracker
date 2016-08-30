@@ -1,9 +1,7 @@
-body {
-    background-color: hotpink;
-}
+
 
 .selected {
-  background-color: blue;
+  background-color: 	#87CEEB;
   border-radius: 10%;
   text-align: center;
   margin-right: auto;
@@ -15,7 +13,7 @@ body {
 }
 
 h3 {
-  background-color: blue;
+  background-color: #00BFFF;
   border-radius: 10%;
   text-align: center;
   margin-right: auto;
@@ -25,7 +23,7 @@ h3 {
   padding: 20px;
 }
 .selected h3{
-  background-color: blue;
+  background-color: #00BFFF;
   border-radius: 10%;
   text-align: center;
   margin-right: auto;
@@ -35,12 +33,17 @@ h3 {
       width: 100%;
 }
 h1 {
-  font-size: 500%;
-  font-weight: bold;
-  color: blue;
-  animation-duration: 3s;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
+  font-family: serif;
+  text-decoration: underline;
+	color: #0080ff;
+	font-size: 100px;
+  animation-duration: 2s;
  animation-name: slidein;
+
+
 }
+
 
 @keyframes slidein {
  from {
@@ -60,12 +63,13 @@ text-align: center;
   color: black;
 }
 form.add-new-meal {
+     border: 5px solid #000080;
     border-radius: 10%;
     display: block;
     padding: 20px;
     text-align: center;
     margin-top: 10%;
-    background-color: blue;
+    background-color: 	#87CEEB;
     width: 60%;
     margin-right: auto;
     margin-left: auto;
@@ -82,4 +86,47 @@ font-family: roman;
 letter-spacing: 5px;
 font-size: 2vh;
 color: green;
+}
+
+
+@keyframes movement
+{
+from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+}
+to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+}
+}
+@-moz-keyframes movement
+{
+from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+}
+to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+}
+}
+@-webkit-keyframes movement
+{
+from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+}
+to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+}
+}
+
+@-webkit-keyframes pulse {
+      0% {background-color: #45CEEF;}
+     25% {background-color: #FFF5A5;}
+     50% {background-color: #FFD4DA;}
+     75% {background-color: #99D2E4;}
+     100% {background-color: #D8CAB4;}
+}
+
+body {
+     background-color: #45CEEF;
+     -webkit-animation: pulse 10s infinite alternate;
+
 }

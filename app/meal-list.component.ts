@@ -26,6 +26,9 @@ import { CaloriesPipe } from './calories.pipe'
   `
 })
 
+
+
+
 export class MealListComponent{
   public mealList:Meal[];
   public selectedMeal:Meal;
