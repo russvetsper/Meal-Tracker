@@ -33,12 +33,12 @@ h3 {
       width: 100%;
 }
 h1 {
-  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
   font-family: serif;
   text-decoration: underline;
 	color: #0080ff;
 	font-size: 100px;
-  animation-duration: 2s;
+  animation-duration: 5s;
  animation-name: slidein;
 
 
